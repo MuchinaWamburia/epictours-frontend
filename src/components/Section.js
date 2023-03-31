@@ -17,10 +17,8 @@ function Section (){
        <Link
             to="/destinations"
             className="absolute top-40 left-1/2 transform -translate-x-1/2 bg-white px-8 py-4 rounded-full text-black text-xl font-bold hover:bg-purple-500 hover:text-white transition duration-200 mt-40">
-          
             Get Started
-
-          </Link>
+        </Link>
 
    </div>
 </div>
@@ -41,12 +39,9 @@ function Section (){
   </p> 
     <div className="mt-14">
        <Link
-            to="/destinations" className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-         
-          
+            to="/destinations" className='inline-block bg-purple-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>  
             View
-
-          </Link>
+      </Link>
     </div>
     </div>
 
@@ -68,11 +63,9 @@ function Section (){
         <div className="mt-14">
       
        <Link
-            to="/destinations" className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-         
-          
+            to="/destinations" className='inline-block bg-purple-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
             View
-            </Link>
+      </Link>
 
     </div>
       </div>
@@ -95,11 +88,9 @@ function Section (){
         </p>
         <div className="mt-8">
         <Link
-            to="/destinations" className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-         
-          
+            to="/destinations" className='inline-block bg-purple-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
             View
-            </Link>
+        </Link>
 
     </div>
       </div>
@@ -118,15 +109,12 @@ function Section (){
         <h5 className='font-bold text-m mb-4'>Tsavo National Park</h5>
         <p>
         A journey from Samburu to Tsavo National Park will take you through a captivating landscape of rugged terrain, rolling hills, and vast plains. 
-      
         </p>
         <div className="mt-14">
         <Link
-            to="/destinations" className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-         
-          
+            to="/destinations" className='inline-block bg-purple-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
             View
-            </Link>
+        </Link>
     </div>
       </div>
     </div>
