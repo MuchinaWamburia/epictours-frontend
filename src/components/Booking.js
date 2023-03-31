@@ -92,7 +92,7 @@ const Booking = () => {
                 Book Your Destination{" "}
               </h2>
               <div className="mb-3">
-                <div className="items-center ">
+                <div className=" ">
                   <label className="form-label">Phone No</label>
                   <input
                     onChange={handlePhoneChange}
