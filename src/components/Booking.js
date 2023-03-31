@@ -80,7 +80,7 @@ const Booking = () => {
   
   }
   return (
-    <div className="m-10 text-center bg-gray-200 ">
+    <div className="m-10 bg-gray-200 ">
       {isLoggedIn ? (
         <>
 
