@@ -76,8 +76,18 @@ const Booking = () => {
             confirmButtonText: 'OK'
           });
     // Construct the payment URL
-    // const paymentUrl = `https://www.pesapal.com/API/PostPesapalDirectOrderV4?oauth_callback=${encodeURIComponent(window.location.href)}&oauth_consumer_key=<your-consumer-key>&oauth_signature_method=HMAC-SHA1&oauth_timestamp=${Math.floor(Date.now() / 1000)}&oauth_nonce=${Math.random().toString(36).substring(2)}&pesapal_request_data=<?xml version="1.0" encoding="utf-8"?><PesapalDirectOrderInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Currency="KES" Amount="${price}" Description="Booking payment for ${destinations.name}" Type="MERCHANT" Reference="${id}" FirstName="${value.user.user.first_name}" LastName="${value.user.user.last_name}" Email="${value.user.user.email}" PhoneNumber="${phone}" xmlns="http://www.pesapal.com" />`;
-    const paymentUrl = `https://cybqa.pesapal.com/pesapalv3/api/Transactions/SubmitOrderRequest`;
+    const paymentUrl = `https://www.pesapal.com/API/PostPesapalDirectOrderV4?oauth_callback=${encodeURIComponent(window.location.href)}
+    &oauth_consumer_key=<qkio1BGGYAXTu2JOfm7XSXNruoZsrqEW>&oauth_signature_method=HMAC-SHA1
+    &oauth_timestamp=${Math.floor(Date.now() / 1000)}
+    &oauth_nonce=${Math.random().toString(36).substring(2)}
+    &pesapal_request_data=<?xml version="1.0" encoding="utf-8"?>
+    <PesapalDirectOrderInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" Currency="KES" 
+    Amount="${price}" Description="Booking payment for ${destinations.name}" 
+    Type="MERCHANT" Reference="${id}"Name="${value.user.user.name}" 
+    Email="${value.user.user.email}"
+     PhoneNumber="${phone}" xmlns="http://www.pesapal.com" />`;
+    // const paymentUrl = `https://cybqa.pesapal.com/pesapalv3/api/Transactions/SubmitOrderRequest`;
     // Redirect the user to the payment page
     window.location.href = paymentUrl;
     });
