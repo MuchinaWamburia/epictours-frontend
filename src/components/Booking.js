@@ -12,7 +12,7 @@ const Booking = () => {
   const [capacity, setCapacity] = useState("");
   const [date, setDate] = useState("");
   const [price, setPrice] = useState("");
-  const [destinations,setDestinations] = useState("");
+  const [destination,setDestinations] = useState("");
   const { id } = useParams();
 
 
@@ -22,6 +22,7 @@ const Booking = () => {
       .then((response) => response.json())
       .then((data) => {
         setDestinations(data);
+        setPrice(data.price);
       })
       .catch((error) => console.error(error));
   }, [id,value]);
@@ -84,7 +85,9 @@ const Booking = () => {
     {isLoggedIn ? (
       <>
         <div className="mx-auto p-10 md:w-1/2">
-          <form className="border-2 rounded-lg shadow-lg p-5" onSubmit={handleSubmit}>
+          <form className="border-2 rounded-lg shadow-lg p-5" onSubmit={handleSubmit}> 
+          <h1>Book your trip to {destination.name}</h1>
+      <      p>Price: {price}</p>
             <h2 className="text-center text-2xl font-bold pb-3">Book Your Destination</h2>
             <div className="mb-4">
               <label className="block font-bold mb-2">Phone No</label>
