@@ -64,7 +64,8 @@ function App() {
           path="/booking/:id"
           element={[
             <Navbar />,
-            <Booking destinations={destinations}/>,
+            <Booking destination={destinations}/>
+            ,
             <Footer />,
           ]}
         />
