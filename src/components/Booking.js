@@ -80,74 +80,68 @@ const Booking = () => {
   
   }
   return (
-    <div className="m-10 bg-gray-200 ">
-      {isLoggedIn ? (
-        <>
-
-          <div className=" mx-20 p-20 min-h-screen">
-            
-            <form className="  border-2" onSubmit={handleSubmit}>
-              <h2 className="text-center text-2xl pb-3">
-
-                Book Your Destination{" "}
-              </h2>
-              <div className="mb-3">
-                <div className=" ">
-                  <label className="form-label">Phone No</label>
-                  <input
-                    onChange={handlePhoneChange}
-                    className="form-control m-2 mx-10"
-                    name="phone"
-                    placeholder="Type Here..."
-                    value={phone}
-                  />
-                </div>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Capacity</label>
-                <input
-                  onChange={handleCapacityChange}
-                  className="form-control m-2"
-                  name="capacity"
-                  placeholder="Type Here..."
-                  value={capacity}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Date</label>
-                <input
-                  onChange={handleDatehange}
-                  className="form-control m-2"
-                  name="date"
-                  type="date"
-                  placeholder="Type Here.."
-                  value={date}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Price</label>
-                <input
-                  onChange={handlePrice}
-                  className="form-control m-2"
-                  name="price"
-                  type="price"
-                  placeholder="Type Here.."
-                  value={price}
-                />
-              </div>
-              <button
-                type="submit"
-                className=" items-center rounded-md bg-black text-white p-2 btn btn-primary btn-sm m-4"
-              >
-                Book
-              </button>
-            </form>
-          </div>
-        </>
-      ) : (
-        <p className="bg-white min-h-screen">You must log in first to access this page.</p>
-      )}
-    </div>
+    <div className="m-10 bg-gray-200">
+    {isLoggedIn ? (
+      <>
+        <div className="mx-auto p-10 md:w-1/2">
+          <form className="border-2 rounded-lg shadow-lg p-5" onSubmit={handleSubmit}>
+            <h2 className="text-center text-2xl font-bold pb-3">Book Your Destination</h2>
+            <div className="mb-4">
+              <label className="block font-bold mb-2">Phone No</label>
+              <input
+                onChange={handlePhoneChange}
+                className="w-full p-2 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                name="phone"
+                placeholder="Type Here..."
+                value={phone}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold mb-2">Capacity</label>
+              <input
+                onChange={handleCapacityChange}
+                className="w-full p-2 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                name="capacity"
+                placeholder="Type Here..."
+                value={capacity}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold mb-2">Date</label>
+              <input
+                onChange={handleDatehange}
+                className="w-full p-2 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                name="date"
+                type="date"
+                placeholder="Type Here.."
+                value={date}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold mb-2">Price</label>
+              <input
+                onChange={handlePrice}
+                className="w-full p-2 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                name="price"
+                type="price"
+                placeholder="Type Here.."
+                value={price}
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full items-center rounded-md bg-purple-600 hover:bg-purple-700 text-white py-2 px-4"
+            >
+              Book
+            </button>
+          </form>
+        </div>
+      </>
+    ) : (
+      <p className="bg-white min-h-screen">You must log in first to access this page.</p>
+    )}
+  </div>
+  
   );
 };
 
