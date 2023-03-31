@@ -5,7 +5,7 @@ import {AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
 
 
-const Booking = () => {
+const Booking = ({destinations}) => {
   const value = useContext(AuthContext);
 
   const [phone, setPhone] = useState("");
@@ -86,7 +86,7 @@ const Booking = () => {
       <>
         <div className="mx-auto p-10 md:w-1/2">
           <form className="border-2 rounded-lg shadow-lg p-5" onSubmit={handleSubmit}> 
-          <h1>Book your trip to {destination.name}</h1>
+          <h1>Book your trip to {destinations.name}</h1>
       <      p>Price: {price}</p>
             <h2 className="text-center text-2xl font-bold pb-3">Book Your Destination</h2>
             <div className="mb-4">
