@@ -86,8 +86,8 @@ const Booking = ({destinations}) => {
       <>
         <div className="mx-auto p-10 md:w-1/2">
           <form className="border-2 rounded-lg shadow-lg p-5" onSubmit={handleSubmit}> 
-          <h1>Book your trip to {destinations.name}</h1>
-      <      p>Price: {price}</p>
+          <h1>Book your trip to {destinations.location}</h1>
+      <      p>Price: {destinations.price}</p>
             <h2 className="text-center text-2xl font-bold pb-3">Book Your Destination</h2>
             <div className="mb-4">
               <label className="block font-bold mb-2">Phone No</label>
