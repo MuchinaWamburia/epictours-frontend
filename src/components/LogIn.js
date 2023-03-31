@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Login() {
+function LogIn() {
 
      const {login} = useContext(AuthContext)
 
@@ -65,4 +65,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LogIn;

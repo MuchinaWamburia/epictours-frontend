@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import About from "./components/About";
 import "./index.css";
-import Login from "./components/Login";
+import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 // import DestinationCard from './components/DestinationCard';
 import Destinations from "./components/Destinations";
@@ -59,7 +59,7 @@ function App() {
       <Routes>
         <Route path="/" element={[<Navbar />, <Section />, <Footer />]} />
         <Route path="/about" element={[<Navbar />, <About />, <Footer />]} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LogIn />} />
         <Route
           path="/booking/:id"
           element={[
