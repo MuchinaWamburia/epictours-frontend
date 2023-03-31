@@ -22,7 +22,7 @@ function SignUp() {
 
 
   return (
-    <div className=""style={{backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div className=""style={{backgroundImage: `url('./bg.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
      <div className='text-center'>
             <span className="font-bold text-black font-bold  text-2xl flex-shrink-0">
               <FontAwesomeIcon icon={faPlaneDeparture}  />
