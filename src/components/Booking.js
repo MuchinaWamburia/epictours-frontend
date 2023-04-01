@@ -17,22 +17,23 @@ const Booking = () => {
   const { id } = useParams();
 
 
-  useEffect(() => {
-    console.log(value)
-    fetch(`https://epic-hcpr.onrender.com/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setDestinations(data);
-        setPrice(data.price);
-      })
-      .catch((error) => console.error(error));
-  }, [id,value]);
+  // useEffect(() => {
+  //   console.log(value)
+  //   fetch(`https://epic-hcpr.onrender.com/${id}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setDestinations(data);
+  //       setPrice(data.price);
+  //     })
+  //     .catch((error) => console.error(error));
+  // }, [id,value]);
 
 
 
   const isLoggedIn = sessionStorage.getItem("jwtToken") ? true : false;
   // const user = sessionStorage.getItem("user_id") ? true : false;
-  
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  console.log(user);
 
   const handlePhoneChange = (event) => {
     setPhone(event.target.value);
@@ -59,7 +60,7 @@ const Booking = () => {
       date: date,
       destnation_id: id,
       price: price,
-      usr_id: value.user.user.id
+      usr_id: user.id
     };
       fetch("https://epic-hcpr.onrender.com/books", {
         method: "POST",

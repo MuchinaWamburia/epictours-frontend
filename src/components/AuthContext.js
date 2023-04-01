@@ -43,6 +43,8 @@ export default function AuthProvider({ children }) {
         } else if (response.user) {
           setUser(response);
           sessionStorage.setItem("jwtToken", response.jwt);
+          sessionStorage.setItem("user", JSON.stringify(response.user));
+
           Swal.fire({
             position: "center",
             icon: "success",
